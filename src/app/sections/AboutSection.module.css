@@ -1,0 +1,87 @@
+.aboutSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5E9D5;
+  color: #B6744A;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.lineWrapper {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.line {
+  font-size:9rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.2;
+  font-family: var(--font-bebas-neue);
+  letter-spacing: 0.05em;
+}
+
+.icon1 {
+  width: 200px;
+  height: 100px;
+}
+
+.icon2 {
+  width: 200px;
+  height: 100px;
+}
+
+.imageBox1 {
+  width: 310px;
+  height: 100px;
+  background-image: url('/coffee1.jpg');
+  background-size: cover;
+  background-position: center  40% ;
+  border-radius: 100px;
+}
+
+.imageBox2 {
+  width: 310px;
+  height: 100px;
+  background-image: url('/coffee2.jpg');
+  background-size: cover;
+  background-position: center  40% ;
+  border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 2rem 1rem;
+    min-height: 80vh;
+  }
+
+  .lineWrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .line {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .imageBox1, .imageBox2 {
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+  }
+}
