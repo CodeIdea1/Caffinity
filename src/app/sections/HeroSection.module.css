@@ -110,6 +110,36 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(231, 107, 37, 0.4);
+}
+
+.cta:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.cta:active {
+  transform: translateY(0);
 }
 
 
@@ -231,7 +261,7 @@
 
   .cup3 {
     align-self: flex-start;
-    margin-left: 16%;
+    margin-left: 20%;
     margin-top: -2rem;
   }
 
@@ -278,6 +308,7 @@
   }
 
   .sticker1 {
+    width: 50px;
     top: 25%;
     left: 5%;
   }

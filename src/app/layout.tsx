@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import ResizeHandler from "./components/ResizeHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ scrollBehavior: 'auto' }}>
       <body className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable}`}>
+        <ResizeHandler />
         <Navbar />
         {children}
       </body>

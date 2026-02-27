@@ -100,7 +100,7 @@ export default function HeroSection() {
     }
 
     gsap.fromTo(cup3Ref.current,
-      { y: 0, x: 0, rotation: isMobile ? -2 : 0, scale: 1 },
+      { y: 0, x: 0, rotation: isMobile ? -2 : 0, scale: 1, marginBottom: 10 },
       { 
         y: isMobile ? '170vh' : '100vh',
         x: () => {
@@ -112,6 +112,7 @@ export default function HeroSection() {
         },
         rotation: -6,
         scale: 1.2,
+        marginTop: isMobile ? 200 : 0,
         scrollTrigger: {
           trigger: '.aboutSection',
           start: 'top bottom',
